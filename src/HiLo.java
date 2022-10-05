@@ -11,6 +11,8 @@ public class HiLo {
 
         do {
 
+            int countAttempts = 0;
+
             int hiddenNumber = (int)(Math.random() * 100 +1); // (0.0...0.99999999) * 100 + 1
 
             int userNumber = 0;
@@ -20,6 +22,8 @@ public class HiLo {
                 System.out.println("Введите число от 1 до 100:");
 
                 userNumber = scanner.nextInt();
+
+                countAttempts++;
 
                 if (userNumber < hiddenNumber){
 
@@ -32,15 +36,16 @@ public class HiLo {
                 }else {
 
                     System.out.println(userNumber + " это загаданное число. Вы победили!");
+                    System.out.println("Вы использовали " + countAttempts + "попыток! Хорошая работа");
                 }
 
             }
 
-            System.out.println("Хотите сыграть снова (y/n)?");
+            System.out.println("Хотите сыграть снова (д/н)?");
 
             playAgain = scanner.next();
 
-        } while (playAgain.equalsIgnoreCase("y"));
+        } while (playAgain.equalsIgnoreCase("д"));
 
         System.out.println("Спасибо за игру! Пока!");
 
