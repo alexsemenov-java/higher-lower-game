@@ -9,12 +9,28 @@ public class HiLo {
 
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("Введите число от 1 до 100:");
+        while (userNumber != hiddenNumber) {
 
-        userNumber = scanner.nextInt();
+            System.out.println("Введите число от 1 до 100:");
 
-        System.out.println("Вы ввели число " + userNumber + ". " + "Спасибо!" );
+            userNumber = scanner.nextInt();
 
+            if (userNumber < hiddenNumber){
+
+                System.out.println( userNumber +  " меньше загаданного. Ввведите еще число");
+
+            } else if (userNumber > hiddenNumber) {
+
+                System.out.println(userNumber + " больше загаданного. Введите еще число");
+
+            }else {
+
+                System.out.println(userNumber + " это загаданное число. Вы победили!");
+
+            }
+
+
+        }
 
     }
 }
