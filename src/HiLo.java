@@ -3,11 +3,9 @@ import java.util.Scanner;
 public class HiLo {
     public static void main(String[] args) {
 
-
-
         Scanner scanner = new Scanner(System.in);
 
-        String playAgain = "";
+        String playAgain;
 
         do {
 
@@ -36,7 +34,7 @@ public class HiLo {
                 }else {
 
                     System.out.println(userNumber + " это загаданное число. Вы победили!");
-                    System.out.println("Вы использовали " + countAttempts + "попыток! Хорошая работа");
+                    System.out.println("Вы использовали " + countAttempts + " попыток! Хорошая работа");
                 }
 
             }
